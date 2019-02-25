@@ -1,35 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>效果图</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+	   <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="jss/ie10-viewport-bug-workaround.css" rel="stylesheet">
+     <link href="jss/dashboard.css" rel="stylesheet">
     <style type="text/css">
-    	ul{
-    		list-style: none;
-    	}
-    	.a{
-    		padding: 0;
-    		padding-top: 20px;
-    		background-color:#ccc;
-    		height: 900px;
-    	}
-    	.a2  li{
-    		padding-left: 20px;
-    		line-height: 35px;
-    	}
-    	.a2 li:hover{
-             background-color: #1194EDFF;
-    	}
-    	.a2 li a:hover{
-    		color: #fff;
-    	}
     	.b{
     		font-size: 35px;
-    		font-weight: normal;
     		font-family: 宋体;
+            /*margin: 0;*/
+            /*margin-top: 20px;*/
+            /*margin-bottom: 10px;*/
     	}
     	.c{
     		margin-bottom: 10px;
@@ -44,10 +29,18 @@
     </style>
 </head>
 <body>
-	<nav  class="navbar-inverse">
-  <div class="container-fluid">
-    <!-- Collect the nav links, forms, and other content for toggling -->
-      <ul class="nav navbar-nav">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
         <li><a href="#">某管理系统</a></li>
         <li class="active" ><a href="#">首页</a></li>
         <li class="dropdown">
@@ -71,54 +64,51 @@
         </div>
         <button type="submit" class="btn btn-default">登录</button>
       </form>
-
-  </div>
-  </nav>
+        </div>
+      </div>
+    </nav>
   <div class="container-fluid">
   	<div class="row">
   	<!-- 左侧 -->
-  	    <div class="a hidden-xs col-sm-3 col-md-3">
-  	    <div>
-  	    	 <ul class="list-group">
-  	          <li><a href="#" class="list-group-item active" style="padding-left: 20px;">首页</a></li>
-  	       </ul>
-  	    </div>
-  	      	<ul class="list-group a2">
-  	      		<li><a href="#">信息建立</a></li>
-  	      		<li><a href="#">信息查询</a></li>
-  	      		<li><a href="#">信息管理</a></li>
-  	      	</ul> 
-  	      	<ul class=" list-group a2">
-  	      		<li><a href="#">设置</a></li>
-  	      		<li><a href="#">帮助</a></li>
-  	      	</ul> 
-  	    </div>
+  	   <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="#">信息建立</a></li>
+            <li><a href="#">信息查询</a></li>
+            <li><a href="#">信息管理</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="#">设置</a></li>
+            <li><a href="#">帮助</a></li>
+          </ul>
+        </div>
   	    <!-- 右侧 -->
-  	    <div class="you col-sm-9 col-md-9">
-  	        <h1 class="b" data-toggle="tab">管理控制台<hr></h1>
+  	    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  	       <h1 class="page-header b">管理控制台</h1>
   	<div class="btn-toolbar c" role="toolbar">
   	<div class="btn-group">
-  	  <button type="button" class="btn btn-default">操作1</button>
+  	  <button type="button" class="btn btn-default btn-lg">操作1</button>
   	 </div>
   	<div class="btn-group">
-  	  <button type="button" class="btn btn-primary dropdown-toggle">操作2</button>
+  	  <button type="button" class="btn btn-primary btn-lg">操作2</button>
   	</div>
   	<div class="btn-group">
-  	  <button type="button" class="btn btn-success dropdown-toggle">操作3</button>
+  	  <button type="button" class="btn btn-success btn-lg">操作3</button>
   	</div>
   	<div class="btn-group">
-  	  <button type="button" class="btn btn-info dropdown-toggle">操作4</button>
+  	  <button type="button" class="btn btn-info btn-lg">操作4</button>
   	</div>
   	<div class="btn-group">
-  	  <button type="button" class="btn btn-warning dropdown-toggle">操作5</button>
+  	  <button type="button" class="btn btn-warning btn-lg">操作5</button>
   	</div>
   	<div class="btn-group">
-  	  <button type="button" class="btn btn-danger dropdown-toggle">操作6</button>
+  	  <button type="button" class="btn btn-danger btn-lg">操作6</button>
   	</div>
   	</div>
   		<div class="row">
   			<div class="col-xs-12 col-md-6">
-  				
   			<div class="panel panel-primary">
   			  	  	<div class="panel-heading">最新提醒</div>
   			  	  <div class="panel-body">
@@ -211,5 +201,11 @@
   	</div>
   	</div>
   </div>
+ <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="jss/holder.min.js.下载"></script>
+<script src="jss/ie10-viewport-bug-workaround.js.下载"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="jss/ie-emulation-modes-warning.js.下载"></script>
 </body>
 </html>
