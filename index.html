@@ -4,29 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>效果图</title>
-	   <link href="css/bootstrap.min.css" rel="stylesheet">
-     <link href="jss/ie10-viewport-bug-workaround.css" rel="stylesheet">
-     <link href="jss/dashboard.css" rel="stylesheet">
-    <style type="text/css">
-    	.b{
-    		font-size: 35px;
-    		font-family: 宋体;
-            /*margin: 0;*/
-            /*margin-top: 20px;*/
-            /*margin-bottom: 10px;*/
-    	}
-    	.c{
-    		margin-bottom: 10px;
-    	}
-    	.g1{
-    		font-size: 18px;
-    	}
-    	.j{
-    		margin-bottom: 20px;
-    		border-radius: 5px;
-    	}
-    </style>
+	  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -38,11 +17,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <a class="navbar-brand" href="#">某管理系统</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-        <li><a href="#">某管理系统</a></li>
-        <li class="active" ><a href="#">首页</a></li>
+        <li class="active" ><a href="#">首页<span class="sr-only">(current)</span></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">功能 <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -60,6 +39,8 @@
        <form class="navbar-form navbar-left navbar-right">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="用户名...">
+        </div>
+        <div class="form-group">
           <input type="password" class="form-control" placeholder="密码...">
         </div>
         <button type="submit" class="btn btn-default">登录</button>
@@ -85,28 +66,16 @@
           </ul>
         </div>
   	    <!-- 右侧 -->
-  	    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-  	       <h1 class="page-header b">管理控制台</h1>
-  	<div class="btn-toolbar c" role="toolbar">
-  	<div class="btn-group">
-  	  <button type="button" class="btn btn-default btn-lg">操作1</button>
-  	 </div>
-  	<div class="btn-group">
-  	  <button type="button" class="btn btn-primary btn-lg">操作2</button>
-  	</div>
-  	<div class="btn-group">
-  	  <button type="button" class="btn btn-success btn-lg">操作3</button>
-  	</div>
-  	<div class="btn-group">
-  	  <button type="button" class="btn btn-info btn-lg">操作4</button>
-  	</div>
-  	<div class="btn-group">
-  	  <button type="button" class="btn btn-warning btn-lg">操作5</button>
-  	</div>
-  	<div class="btn-group">
-  	  <button type="button" class="btn btn-danger btn-lg">操作6</button>
-  	</div>
-  	</div>
+  	    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+  	       <h1 class="page-header">管理控制台</h1>
+  	    <p>
+  	      <button type="button" class=" btn-lg btn btn-default">操作1</button>
+  	      <button type="button" class=" btn-lg btn btn-primary">操作2</button>
+  	      <button type="button" class=" btn-lg btn btn-success">操作3</button>
+  	      <button type="button" class=" btn-lg btn btn-info">操作4</button>
+  	      <button type="button" class=" btn-lg btn btn-warning">操作5</button>
+  	      <button type="button" class=" btn-lg btn btn-danger">操作6</button>
+  	    </p>
   		<div class="row">
   			<div class="col-xs-12 col-md-6">
   			<div class="panel panel-primary">
@@ -119,7 +88,7 @@
   			  	  		<strong>提示</strong>
   			  	  	您的订单（2014002）被打回！</div>
   			  	  	<div class="alert alert-warning" role="alert">
-  			  	  	<strong>提示</strong>
+  			  	  	  <strong>提示</strong>
   			  	    您的订单（2013001）客户付款延迟！</div>
   			  	  </div>
   			  	  </div>
@@ -127,11 +96,13 @@
   			  	  <div class="col-xs-12 col-md-6">
   			  	  	<div class="panel panel-primary">
   			  	  	<div class="panel-heading">我的任务</div>
-  			  	  		<ul class="nav nav-pills nav-stacked  panel-body">
-  			  	  	<li role="presentation"  class="list-group-item-info j"><a href="">订单审批<span class="badge pull-right">42</span></a></li>
-					<li role="presentation" class="list-group-item-info j"><a href="">收款确认<span class="badge pull-right">20</span></a></li>
-					<li role="presentation" class="list-group-item-info j"><a href="">付款确认<span class="badge pull-right">10</span></a></li>
-					</ul>	
+                <div class="panel-body">
+  			  	    <ul class="nav nav-pills nav-stacked">
+  			  	  	<li role="presentation"><a href="#" class="alert alert-info">订单审批<span class="badge pull-right">42</span></a></li>
+					      <li role="presentation"><a href="#" class="alert alert-info">收款确认<span class="badge pull-right">20</span></a></li>
+					      <li role="presentation"><a href="#" class="alert alert-info">付款确认<span class="badge pull-right">10</span></a></li>
+					      </ul>	
+                </div>
   			  	  	</div>
   			  	  </div>
   		</div>
@@ -174,7 +145,7 @@
   	 	  		</tr> 
   	 	  		</tbody>
   	 	  	</table>
-  	 	  	<button class="btn btn-primary" type="button">查看详情&raquo;</button>
+  	 	  	<button class="btn btn-primary" type="button">查看详情 &raquo;</button>
   	 	  </div>
   	 	 </div>
   	 	</div>
@@ -182,13 +153,13 @@
   	 	 <div class="panel panel-primary">
   	 	 	<div class="panel-heading">工程进度</div>
   	 	 	<div class="panel-body">
-  	 	  <h3 class="g1"><span class="label label-primary">水井挖掘工程</span></h3>
+  	 	  <h3><span class="label label-primary">水井挖掘工程</span></h3>
   	 	     <div class="progress">
   	 	  	<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
   	 	 <span class="sr-only">60% Complete</span>
   	 	 </div>
   	 	  </div>
-  	 	  <h3 class="g1"><span class="label label-danger">基建工程</span></h3>
+  	 	  <h3><span class="label label-danger">基建工程</span></h3>
   	 	  	<div class="progress">
   	 	  	<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
   	 	 <span class="sr-only">80% Complete (danger)</span>
@@ -201,11 +172,7 @@
   	</div>
   	</div>
   </div>
- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="jss/holder.min.js.下载"></script>
-<script src="jss/ie10-viewport-bug-workaround.js.下载"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="jss/ie-emulation-modes-warning.js.下载"></script>
 </body>
 </html>
